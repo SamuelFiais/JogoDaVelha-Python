@@ -4,8 +4,13 @@ from time import sleep
 def check_winner(simbol):
     for i in winner:
         if board[i[0]] == simbol and board[i[1]] == simbol and board[i[2]] == simbol:
-            print(f"O {simbol} venceu!!")
+            print(f"{simbol} WON!!")
             return True
+        else:
+            if '' not in board:
+                print("Gave Old!")
+                return True
+
 
 game = False
 board = ['', '', '', '', '', '', '', '', '']
